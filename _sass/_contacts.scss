@@ -1,0 +1,45 @@
+.contacts {
+	
+}
+.contact-box {
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+	width:50%;
+	padding:0 0 0 74px;
+	margin:10px 0 40px 0;
+	@include font-size-rem(16);
+	&:before {
+		content:'';
+		position:absolute;
+		top:-10px;
+		left:0;
+		width:64px;
+		height:64px;
+	}
+	&_user {
+		&:before {
+			background:url(../assets/contacts/personal.png) no-repeat;
+		}
+	}
+	&_phone {
+		&:before {
+			background:url(../assets/contacts/phone.png) no-repeat;
+		}
+	}
+	&_skype {
+		&:before {
+			background:url(../assets/contacts/skype.png) no-repeat;
+		}
+	}
+	&_email {
+		&:before {
+			background:url(../assets/contacts/email.png) no-repeat;
+		}
+	}
+	&__title {
+		color:rgb(41,128,185);}
+	&__value {
+		
+	}
+}

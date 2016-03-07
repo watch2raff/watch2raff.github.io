@@ -1,0 +1,14 @@
+<nav class="navigation">
+	{% for my_page in site.pages %}
+		{% if my_page.title %}
+			{% assign className = 'navigation__item' %}
+			{% if page.url == my_page.url %}
+				{% assign className = 'navigation__item active' %}
+			{% endif %}
+
+			<li class="{{ className }}">
+				<a class="JS-AnchorElement" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</nav>

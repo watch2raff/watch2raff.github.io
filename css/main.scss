@@ -6,8 +6,9 @@
 
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: "Open Sans", Arial, sans-serif;
+$base-font-size: 16px;
+$base-font-size-px: 16;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -43,11 +44,18 @@ $on-laptop:        800px;
     }
 }
 
+@mixin font-size-rem($px){
+	font-size: $px / $base-font-size-px + rem;
+}
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+	"base",
+	"layout",
+	"syntax-highlighting",
+	"navigation",
+	"logo",
+	"contacts"
 ;
